@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<meta charset="UTF-8">
+
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=latin-ext"
+          rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="/style.css" rel="stylesheet" type="text/css">
+
+
+    <title>Recipe</title>
+</head>
+
+<body>
+
+<div class="conteiner">
+
+    <div th:replace="elements :: header"></div>
+    <div th:replace="elements :: navbarCategories"></div>
+
+    <div class="leftContent" style="display:inline-block">
+        <div class="bar">
+            <h4 th:text="${recipe.getName()}">Recipe name</h4>
+        </div>
+        <div class="receipeBody" style="width: 780px">
+            <img th:src="${recipe.getPicture()}" width="400px"></br>
+            <b><a style="font-size: 22px; color: #00cc44">Składniki</a></b></br>
+            <span th:text="${recipe.getIngredients()}">Składniki</span></br>
+            <b><a style="font-size: 22px; color: #00cc44">Przygotowanie</a></b></br>
+            <span th:text="${recipe.getInstructions()}">Przygotowanie</span>
+            </br>
+            </br>
+            <div>
+
+                <div style="display: inline-block;">
+                    <div class="btn-group" role="group" aria-label="Basic example">
+                        <a class="btn btn-light" th:href="|/edit?id=${recipe.id}|">Edytuj.</a>
+                        <a class="btn btn-light" th:href="|/delete?id=${recipe.id}|">Usuń</a>
+                        <a class="btn btn-light" th:href="|/like?id=${recipe.id}|">Like</a>
+                        <a class="btn btn-light" th:href="|/|">Powrót</a>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="rightContent" style="display:inline-block">
+
+    </div>
+
+
+</div>
+
+</body>
+</html>

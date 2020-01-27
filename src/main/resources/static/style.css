@@ -1,0 +1,144 @@
+
+.logo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-family: 'Sofia', cursive;
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.category-img {
+    width: 200px;
+}
+
+.navbar {
+    font-family: 'Sofia', cursive;
+    font-size: 18px;
+    color: #000;
+
+}
+
+.option {
+    padding: 20px;
+    margin-left: 20px;
+}
+
+.a {
+    color: black;
+}
+
+a:hover {
+    color: #ffa243 !important;
+}
+
+a:active {
+    color: #ffa243 !important;
+}
+
+a:link {
+    color: #ffa243 !important;
+}
+
+ul {
+    list-style-type: "♥";}
+
+
+.new {
+
+    vertical-align: top;
+    top: 0;
+    width: 220px;
+    margin-left: 20px;
+
+}
+
+.new.a:hover {
+    background-image: none;
+
+}
+
+.conteiner {
+    font-family: 'Roboto', sans-serif;
+
+    width: 1200px;
+    padding-left: 60px;
+    padding-right: 60px;
+    margin: 0 auto;
+
+}
+
+.leftContent {
+    vertical-align: top;
+}
+
+.rightContent {
+    vertical-align: top;
+}
+
+.topRecipies {
+    font-family: 'Roboto', sans-serif;
+    width: 200px;
+    margin-left: 50px;
+
+}
+
+.topRecipiesHeader {
+    font-size: 15px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+
+    width: 200px;
+    padding: 10px;
+
+    background-image: url(/img/pattern2.png);
+    background-attachment: fixed;
+}
+
+.bar {
+    font-size: 15px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Roboto', sans-serif;
+
+    width: 780px;
+    padding: 10px;
+
+    background-image: url(/img/pattern2.png);
+    background-attachment: fixed;
+
+}
+
+.newestRecipies {
+    width: 780px;
+    padding: 10px;
+    text-align: justify;
+
+}
+
+
+.receipeBody {
+    font-size: 15px;
+    color: #000;
+    font-style: normal;
+    font-weight: 400;
+    text-align: justify-all;
+    font-family: 'Roboto', sans-serif;
+
+    background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(/img/pattern2.png);
+    background-attachment: fixed;
+
+
+    width: 780px;
+    padding: 20px;
+}

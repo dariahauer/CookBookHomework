@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link href="https://fonts.googleapis.com/css?family=Sofia&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700&display=swap&subset=latin-ext"
+          rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/style.css"/>
+    <title>Title</title>
+</head>
+<body>
+
+<div class="header" th:fragment="header">
+    <div class="logo">
+        <div class="img" style="display:inline-block">
+           <img src="/img/logo.jpg" alt="" width="110" height="110"/>
+        </div>
+        <div id="logotxt" style="display:inline-block">
+            <a style="color: #ffa243 !important" href="/">Moja Książka Kucharska</a>
+        </div>
+    </div>
+</div>
+
+<div class="topRecipies" th:fragment="topRecipies">
+    <div class="topRecipiesHeader">
+        <h4>ULUBIONE PRZEPISY</h4>
+    </div>
+    <div style="padding-top: 10px" th:each="top : ${top}">
+<!--        <img th:src="${top.getPicture()}" width="50px">-->
+<!--        <b><a style="color: #00c874; text-align: justify;" th:href="|/category/recipe/${top.getId()}|" th:text="${top.getName()}">txt</a></b>-->
+        <table><tr>	<td><img th:src="${top.getPicture()}" width="50px"></td>
+            <td><b><a style="color: #00c874; text-align: justify;" th:href="|/category/recipe/${top.getId()}|" th:text="${top.getName()}">txt</a></b><br> </td></tr></table>
+<!--        <table><tr>	<td><img src="obrazek.jpg"></td>	<td>Jakiś tekst<br> Jakiś tekst<br> Jakiś tekst<br> Jakiś tekst<br></td></tr></table>-->
+
+    </div>
+</div>
+
+<div class="categories" th:fragment="navbarCategories">
+    <nav class="navbar navbar-dark bg-white navbar-expand-md">
+        <button class="navbar-toggler" type="button" data-toggler="collapse" data-target="#mainmenu"
+                aria-controls="mainmenu"
+                aria-expanded="false" aria-label="Przełącznik"><span class="navbar-toggler-icon"></span></button>
+
+        <div class="collapce navbar-collapse navbar-dark" id="navbarNav">
+            <div class="option">
+                <a style="color: #00c874" href="/recipesFind">Lista przepisów:</a>
+            </div>
+            <div class="option" th:each="category: ${categories}">
+                <a style="color: #00c874" th:href="|/category/${category.getId()}|"
+                   th:text="${category.getTitle()}"> Category name </a>
+            </div>
+        </div>
+    </nav>
+</div>
+
+
+</body>
+</html>
