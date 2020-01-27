@@ -18,9 +18,6 @@ public class Recipe {
     @Column(columnDefinition="varchar(MAX)")
     private String instructions;
 
- //   @Column(columnDefinition="varchar(1000)")
- //   private String notes;
-
     private Double mark;
 
     @ManyToOne
@@ -34,7 +31,6 @@ public class Recipe {
                 ", picture='" + picture + '\'' +
                 ", ingredients='" + ingredients + '\'' +
                 ", instructions='" + instructions + '\'' +
-       //         ", notes='" + notes + '\'' +
                 ", mark=" + mark +
                 ", category=" + category +
                 '}';
@@ -48,7 +44,6 @@ public class Recipe {
         this.picture = picture;
         this.ingredients = ingredients;
         this.instructions = instructions;
-     //   this.notes = notes;
         this.mark = mark;
         this.category = category;
     }
@@ -92,14 +87,6 @@ public class Recipe {
     public void setInstructions(String instructions) {
         this.instructions = instructions;
     }
-
-  //  public String getNotes() {
-  //      return notes;
- //   }
-
- //   public void setNotes(String notes) {
-//        this.notes = notes;
-//    }
 
     public Double getMark() {
         return mark;

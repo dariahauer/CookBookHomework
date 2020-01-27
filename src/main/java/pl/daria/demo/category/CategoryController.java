@@ -36,7 +36,7 @@ public class CategoryController {
             Category category = optional.get();
             model.addAttribute("selected", category);
             return "category";
-        } else return"404";
+        } else return"error";
     }
 
 

@@ -27,11 +27,10 @@
             <ul>
                 <li th:each="recipe: ${recipes}">
                     <a th:text="${recipe.getName()}"
-                       th:href="|/category/recipe/${recipe.getId()}|">name</a>
-                    <span style="color: green; font-size: 13px; font-style: italic;" th:href="|/recipe/${recipe.id}|" th:text="|Liked:${recipe.getMark()}|"></span>
+                       th:href="|/category/recipe/${recipe.getId()}|" style="color: #00c874">name</a>
+                    <span style="color:green; font-size: 13px; font-style: italic;" th:href="|/recipe/${recipe.id}|" th:text="|Liked:${recipe.getMark()}|"></span>
 
                 </li>
-
             </ul>
         </div>
 

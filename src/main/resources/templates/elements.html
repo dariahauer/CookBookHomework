@@ -12,28 +12,28 @@
     <title>Title</title>
 </head>
 <body>
-
 <div class="header" th:fragment="header">
     <div class="logo">
         <div class="img" style="display:inline-block">
-           <img src="/img/logo.jpg" alt="" width="110" height="110"/>
+            <img src="/img/logo.jpg" alt="" width="90" height="90"/>
         </div>
         <div id="logotxt" style="display:inline-block">
             <a style="color: #ffa243 !important" href="/">Moja Książka Kucharska</a>
         </div>
     </div>
 </div>
-
 <div class="topRecipies" th:fragment="topRecipies">
     <div class="topRecipiesHeader">
         <h4>ULUBIONE PRZEPISY</h4>
     </div>
     <div style="padding-top: 10px" th:each="top : ${top}">
-<!--        <img th:src="${top.getPicture()}" width="50px">-->
-<!--        <b><a style="color: #00c874; text-align: justify;" th:href="|/category/recipe/${top.getId()}|" th:text="${top.getName()}">txt</a></b>-->
-        <table><tr>	<td><img th:src="${top.getPicture()}" width="50px"></td>
-            <td><b><a style="color: #00c874; text-align: justify;" th:href="|/category/recipe/${top.getId()}|" th:text="${top.getName()}">txt</a></b><br> </td></tr></table>
-<!--        <table><tr>	<td><img src="obrazek.jpg"></td>	<td>Jakiś tekst<br> Jakiś tekst<br> Jakiś tekst<br> Jakiś tekst<br></td></tr></table>-->
+        <table>
+            <tr>
+                <td><img th:src="${top.getPicture()}" width="50px"></td>
+                <td><b><a style="color: #00c874; text-align: justify;" th:href="|/category/recipe/${top.getId()}|"
+                          th:text="${top.getName()}">txt</a></b><br></td>
+            </tr>
+        </table>
 
     </div>
 </div>
@@ -55,7 +55,5 @@
         </div>
     </nav>
 </div>
-
-
 </body>
 </html>

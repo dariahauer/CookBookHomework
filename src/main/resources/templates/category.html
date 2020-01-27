@@ -20,19 +20,17 @@
     <div th:replace="elements :: navbarCategories"></div>
 
     <div class="leftContent" style="display:inline-block">
-        <div class="bar">
+        <div class="categoryBody">
             <h4 th:text="${selected.getTitle()}">Category name</h4>
+            <img th:src="${selected.getImg()}" style="width:600px;height:150px"></br>
         </div>
-
-        <span style="padding-top: 5px; padding-left: 10px; text-align: center; font-size: 20px; color: #ffa243"
+        <span style="padding-top: 5px; padding-left: 10px; text-align: center; font-size: 20px; color: black"
               th:text="${selected.getDescription()}"> desc of category</span>
-
-<!--        <img th:src="${selected.getImg()}" width="220px">-->
 
         <ul>
             </br>
             <li th:each="recipe: ${selected.recipeList}">
-                <a style="color: black" th:href="|/category/recipe/${recipe.getId()}|"
+                <a style="color: #ffa243" th:href="|/category/recipe/${recipe.getId()}|"
                    th:text="${recipe.getName()}"></a></br>
             </li>
         </ul>
